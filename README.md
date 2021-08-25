@@ -12,8 +12,7 @@ None, this project was made for no real reason at all (maybe to get some DTU str
 
 ### TODO
 - It can't really parse vectors or matrices
-![cos(x) = c \cdot o \cdot s \cdot x](https://latex.codecogs.com/svg.latex?x%3D%5Cfrac%7B-b%5Cpm%5Csqrt%7Bb%5E2-4ac%7D%7D%7B2a%7D)
-- It thinks $$ cos(x) = c \cdot o \cdot s \cdot x $$
+- It thinks <img src="https://latex.codecogs.com/svg.image?cos(x)=c&space;\cdot&space;o&space;\cdot&space;s&space;\cdot&space;x" title="cos(x)=c \cdot o \cdot s \cdot x" />
 - If one wants to be really sneaky, then:
     - Have selenium read what's in the <input> tag and then evaluate from there (i.e. discard the calculator)
     - Have it be a chrome extension rather than a selenium script
