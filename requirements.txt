@@ -1,0 +1,9 @@
+requests==2.23.0
+lxml==4.5.1
+click==7.1.2
+numpy==1.19.3
+sympy==1.8
+selenium==3.141.0
+~atplotlib==3.2.2
+latex2mathml==3.61.0
+matplotlib==3.4.3
