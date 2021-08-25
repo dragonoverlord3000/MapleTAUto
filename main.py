@@ -46,7 +46,8 @@ TO_REMOVE_ALL = ["\\left", "\\right", "\;"]
 # Helper function
 def rm_all_tmp_files():
     for file in os.listdir("./temp_files/"):
-        os.remove("./temp_files/" + file)
+        if not "empty" in file:
+            os.remove("./temp_files/" + file)
 
 #### Preprocessing
 # Remove all instances of to_remove

@@ -17,9 +17,11 @@ It allows you to write python code (vanilla, sympy, numpy, whatever) from the br
 
 ### How to use
 1. <a href="https://chromedriver.chromium.org/downloads">Install</a> the selenium chromedriver that corresponds to your version of google Chrome
+    - <em>Remember</em> to save the path to your <i>chromedriver.exe</i> file somewhere you will remember
 2. Download this repo to your local machine
-3. Go to the folder in your local 
-
+3. Go to the folder containing this project and run: ```pip install -r requirements.txt```
+4. Now *while in the folder* run ```python main.py "DTU inside username" "DTU inside password" "path to chromedriver.exe file"```
+5. Enjoy
 
 ### Vision
 None, this project was made for no real reason at all (maybe to get some DTU street cred?).
