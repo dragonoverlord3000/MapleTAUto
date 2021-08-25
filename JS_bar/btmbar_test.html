@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Kaeple Subsiduary</title>
+</head>
+<body>
+    <h1>Header</h1>
+22
+
+</body>
+<script>
+    /* DOM Elements */
+    const showerbtn = document.createElement("button")
+    const element = document.getElementsByTagName("body")[0]
+    const hr = document.createElement("hr")
+    const div = document.createElement("div")
+    const div2 = document.createElement("div")
+    const center = document.createElement("center")
+    const h1 = document.createElement("h1")
+    const p = document.createElement("p")
+    const inp = document.createElement("input")
+    const out = document.createElement("div")
+    const footer_div = document.createElement("div")
+
+    /* Text */
+    showerbtn_text = document.createTextNode("H")
+    h1_text = document.createTextNode("Calculator")
+    p_text = document.createTextNode("| - Kaeple")
+
+    showerbtn.appendChild(showerbtn_text)
+    h1.appendChild(h1_text)
+    p.appendChild(p_text)
+
+    /* Attributes */
+    div.setAttribute("id", "calc_div")
+    showerbtn.setAttribute("onclick", "showCalculator()")
+    showerbtn.setAttribute("class", "dropbtn")
+    showerbtn.setAttribute("padding", "2")
+    inp.setAttribute("id", "sp_input")
+    out.setAttribute("id", "sp_call_output")
+
+    /* To HTML */
+    element.append(showerbtn)
+    element.appendChild(hr)
+    element.appendChild(div)
+    div.appendChild(div2)
+    div2.appendChild(center)
+    center.appendChild(h1)
+    div2.appendChild(p)
+    div.appendChild(inp)
+    div.appendChild(out)
+    div.appendChild(footer_div)
+
+    /* Styling */
+    div.setAttribute("style", "background-color:#D1C0A8; width:100%; padding:0, margin:0")
+    h1.style.fontFamily = "Courier"
+    h1.style.fontSize = "300%"
+    h1.style.marginBottom = "0"
+    p.style.marginTop = "0"
+    p.style.marginLeft = "12%"
+    inp.style.margin = "auto"
+    inp.style.display = "block"
+    inp.style.fontSize = "200%"
+    inp.style.width = "80%"
+    out.style.height = "85px"
+    out.style.width = "100%"
+    out.style.border = "1px solid black"
+    div2.style.width = "100%"
+    footer_div.style.width = "100%"
+    footer_div.style.height = "20px"
+
+    /* Global variables */
+    var numInfoBoxes = 0
+
+    /* Functions */
+    // The hide/show button functionality
+    window.showCalculator = function(e) {
+        if (event.target.matches('.dropbtn')) {
+            calc_div = document.getElementById("calc_div");
+            if (calc_div.getAttribute("hidden")) {
+                calc_div.removeAttribute("hidden")
+            }
+            else {
+                calc_div.setAttribute("hidden", true)
+            }
+        }
+    };
+
+    // the function that creates info boxes
+    window.createInfoBox = function(eq) {
+        // Input should be a div containing all the 
+        info_div = document.createElement("div")
+        info_div_text = new DOMParser().parseFromString(eq, "text/xml");
+        info_div.setAttribute("style", "border:1px solid black; text-align:center; padding-top: 20px; padding-bottom: 20px; width:49%; height: 100px; line-height: 100px; margin:0; background-color: #E8DED1")
+        info_div.appendChild(info_div_text.firstChild)
+
+        if (numInfoBoxes % 2 == 0) {
+            span = document.createElement("span")
+            span.setAttribute("id", "span" + String(numInfoBoxes))
+            div2.appendChild(span)
+            info_div.style.float = "left"
+        } else {
+            span = document.getElementById("span" + String(numInfoBoxes - 1))
+            info_div.style.float = "right" 
+        }
+
+        span.appendChild(info_div)
+        
+        numInfoBoxes += 1
+    };
+
+    
+
+</script>
+</html>

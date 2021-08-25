@@ -1,0 +1,20 @@
+!gen/__init__.py
+
+*.pyc
+
+# vim stuff
+*.swp
+*.swo
+
+# OSX
+.DS_Store
+
+# virtualenv
+.Python
+bin/
+include/
+lib/
+pip-selfcheck.json
+
+# setuptools
+*.egg-info/
