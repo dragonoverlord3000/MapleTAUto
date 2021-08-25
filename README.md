@@ -12,7 +12,7 @@ None, this project was made for no real reason at all (maybe to get some DTU str
 
 ### TODO
 - It can't really parse vectors or matrices
-- It thinks cos(x) = c*o*s*x
+- It thinks $$ cos(x) = c \cdot o \cdot s \cdot x $$
 - If one wants to be really sneaky, then:
     - Have selenium read what's in the <input> tag and then evaluate from there (i.e. discard the calculator)
     - Have it be a chrome extension rather than a selenium script
