@@ -1,5 +1,4 @@
 .ipynb_checkpoints
 **/*.ipynb_checkpoints/
-.ipynb
-Main.ipynb
 ./JS_bar
+.git

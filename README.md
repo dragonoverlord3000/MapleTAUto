@@ -1,7 +1,7 @@
 # Maple-TAuto
 
 Maple-TAuto is a tool made for anyone who can't be bothered to do anything <em><font face="Brush Script MT" size=4> TRIVIAL </font></em>.
-It allows you to write python code (vanilla, sympy, numpy, whatever) from the browser and get the return value of your code also in the browser.
+It allows you to write python code (vanilla, sympy, numpy, whatever) from the browser and get the return value of your code - also in the browser.
 
 ### Requirements
 - python 3
@@ -20,8 +20,9 @@ It allows you to write python code (vanilla, sympy, numpy, whatever) from the br
     - <em>Remember</em> to save the path to your <i>chromedriver.exe</i> file somewhere you will remember
 2. Download this repo to your local machine
 3. Go to the folder containing this project and run: ```pip install -r requirements.txt```
-4. Now *while in the folder* run ```python main.py "DTU inside username" "DTU inside password" "path to chromedriver.exe file"```
-5. Enjoy
+4. Create an empty folder in the main directory named "temp_files"
+5. Now *while in the folder* run ```python main.py "DTU inside username" "DTU inside password" "path to chromedriver.exe file"```
+6. Enjoy :)
 
 ### Vision
 None, this project was made for no real reason at all (maybe to get some DTU street cred?).
