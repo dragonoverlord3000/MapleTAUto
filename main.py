@@ -42,6 +42,7 @@ PASSWORD = args.password
 VERBOSE = args.verbosity
 
 TO_REMOVE_ALL = ["\\left", "\\right", "\;"]
+BACKSLASH_LIST = ["cos", "sin", "ln", "sqrt", "sinh", "cosh", "exp"]
 
 # Helper function
 def rm_all_tmp_files():
@@ -132,6 +133,23 @@ def remove_in_out(expr, to_remove, ins=True):
     ret_expr = "".join(new_expr)
     return ret_expr
 
+# sets \
+def set_backslash(expr, backslash_list):
+    """
+    Args:
+        expr (str) - the latex expression
+        backslash_list (list) - list with stuff to backslash
+        
+    Returns (str):
+        Original expression, but with more \
+    """
+    
+    for thing in backslash_list: # yes, I just gave up on giving reasonable names
+        expr = expr.replace(thing, "\\" + thing)
+    expr = expr.replace("\\\\", "\\") # redundancy
+    
+    return expr
+
 # The preprocess function
 def preprocess(expr):
     """
@@ -149,15 +167,14 @@ def preprocess(expr):
     expr = remove_all(expr, TO_REMOVE_ALL)
     expr = remove_in_out(expr, "\\phantom", ins=False)
     expr = remove_in_out(expr, "\\mathit", ins=True)
-    expr = remove_in_out(expr, "\\mathrm", ins=True)    
+    expr = remove_in_out(expr, "\\mathrm", ins=True)
     expr = remove_all(expr, "{}")
-    
+        
     expr = expr.replace("–", "-") # because these are apparently not the same thing
     expr = " ".join(expr.split())
-    unnecesarry_brackets = re.findall("{[a-zA-Z]}", expr)
-    for unnec in unnecesarry_brackets:
-        expr = expr.replace(unnec, unnec[1])
-    
+        
+    expr = set_backslash(expr, BACKSLASH_LIST)
+        
     expr = expr.strip()
     expr = expr[:-1].strip() if expr[-1] == "=" else expr
     return expr

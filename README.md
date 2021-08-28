@@ -29,10 +29,7 @@ None, this project was made for no real reason at all (maybe to get some DTU str
 
 ### TODO
 - It can't really parse vectors or matrices
-- It thinks: 
-
-<div style="text-align:center"><img src="https://latex.codecogs.com/svg.image?cos(x)=c&space;\cdot&space;o&space;\cdot&space;s&space;\cdot&space;x" title="cos(x)=c \cdot o \cdot s \cdot x" /></div>
-
+- It thinks of 'e' as a variable rather than the number 'e', so that needs to be fixed
 - If one wants to be really sneaky, then:
     - Have selenium read what's in the <input> tag and then evaluate from there (i.e. discard the calculator)
     - Have it be a chrome extension rather than a selenium script
