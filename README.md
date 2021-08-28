@@ -24,6 +24,9 @@ It allows you to write python code (vanilla, sympy, numpy, whatever) from the br
 5. Now *while in the folder* run ```python main.py "DTU inside username" "DTU inside password" "path to chromedriver.exe file"```
 6. Enjoy :)
 
+#### Note
+If the 'Testing.ipynb' notebook has been used, then make sure to delete the '.ipynb_checkpoints' file in the 'temp_files' directory before running it again.
+
 ### Vision
 None, this project was made for no real reason at all (maybe to get some DTU street cred?).
 
